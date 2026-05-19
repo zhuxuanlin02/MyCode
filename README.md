@@ -4,24 +4,13 @@
 
 ### 个人终端 AI 编程助手
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Dependencies: 0](https://img.shields.io/badge/dependencies-0-f97316?style=for-the-badge)](pyproject.toml)
-[![Tests: 98.9%](https://img.shields.io/badge/tests-98.9%25-22c55e?style=for-the-badge)](tests/)
-
-[![Readability: 9/10](https://img.shields.io/badge/readability-9%2F10-4F46E5?style=for-the-badge)](docs/)
-[![Performance: Optimized](https://img.shields.io/badge/performance-optimized-06B6D4?style=for-the-badge)](#-performance)
----
-
-*零依赖、高性能、跨平台启动器的终端编程助手。*
+[![Python](https://img.shields.io/badge/python-3.11-blue)]()
 
 </div>
 
 ---
 
 ## 🚀 快速开始
-
-### 安装
 
 ```bash
 # 安装
