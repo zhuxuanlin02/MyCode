@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Literal, Protocol, TypedDict
+from typing import Any, Callable, Literal, Protocol, TypedDict
 
 
 class ChatMessage(TypedDict, total=False):

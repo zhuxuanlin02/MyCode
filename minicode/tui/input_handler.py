@@ -1,11 +1,17 @@
 from __future__ import annotations
+from collections import defaultdict
 import logging
 import os
 import sys
+import threading
 import time
 from typing import Any, Callable
+from minicode.agent_loop import run_agent_turn
+from minicode.history import save_history_entries
+from minicode.prompt import build_system_prompt
+from minicode.tooling import ToolContext
 from minicode.tui.input_parser import KeyEvent, ParsedInputEvent, TextEvent, WheelEvent, parse_input_chunk
-from minicode.tui.state import ScreenState, TtyAppArgs
+from minicode.tui.state import AggregatedEditProgress, ScreenState, TtyAppArgs
 from minicode.cli_commands import try_handle_local_command, find_matching_slash_commands
 from minicode.local_tool_shortcuts import parse_local_tool_shortcut
 from minicode.tui.navigation import _scroll_pending_approval_by, _toggle_pending_approval_expand, _move_pending_approval_selection, _scroll_transcript_by, _jump_transcript_to_edge, _history_up, _history_down, _get_visible_commands
