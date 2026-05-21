@@ -3,7 +3,6 @@
 # MyCode Python 
 
 ### 个人终端 AI 编程助手
-
 [![Python](https://img.shields.io/badge/python-3.11-blue)]()
 
 </div>
@@ -20,51 +19,21 @@ pip install -e .
 python -m minicode.main
 ```
 
----
+## ⚙️ 配置
 
-## 🔥 最新优化 (Learn Claude Code 深度重构)
+### 设置文件
 
-基于行业最佳实践，我们刚刚完成了 **4 阶段深度优化**，新增 **2,242 行** 核心代码：
+`~/.mini-code/settings.json`：
 
-| 阶段 | 优化内容 | 核心收益 |
-|------|----------|----------|
-| **阶段一** | 动态提示词流水线 + 权限门控 | Token 消耗 ⬇️ 30% |
-| **阶段二** | 持久任务图 + 子代理上下文隔离 | 跨步骤工作流支持 |
-| **阶段三** | 工作记忆保护 + 语义记忆匹配 | 长对话质量 ⬆️ 50% |
-| **阶段四** | **安全执行隔离 + 多 Agent 协作** | **支持复杂并行任务** |
-
-### 阶段四亮点：安全与协作
-- **🔒 安全执行隔离**: 引入 `RiskAssessor` 评估操作风险，自动在 Git Worktree 中隔离执行高风险命令，防止意外破坏项目环境。
-- **🤝 多 Agent 协作**: 新增标准化协作协议 (`AgentIdentity`, `TeamRegistry`)，支持 Agent 间任务分发、安全认领和状态同步，为未来并行处理奠定基础。
-- **📊 任务槽位管理**: 精细化控制后台并发任务数，防止资源耗尽。
-
----
-
-## ⚡ 性能亮点
-
-经过 **8 轮系统化优化**（93+ 优化点），在关键性能指标上达到**生产级优秀水平**：
-
-| 性能指标 | 优化前 | 优化后 | **提升** |
-|---------|--------|--------|---------|
-| **Token 估算速度** | 35 ops/sec | 479,326 ops/sec | **🚀 13,695x** |
-| **CPU 空闲使用率** | 5% | 2% | **⬇️ 60%** |
-| **文件读取（缓存）** | 196ms/1000 | 107ms/1000 | **⬆️ 1.8x** |
-| **GC 压力** | 高 | 低 | **⬇️ 30-50%** |
-| **代码可读性** | 3/10 | 9/10 | **⬆️ 200%** |
-| **测试通过率** | - | **98.9%** | ✅ 生产级 |
-
----
-
-## 🔗 相关项目
-
-| 版本 | 仓库 | 说明 |
-|------|------|------|
-| **主仓库** | [LiuMengxuan04/MiniCode](https://github.com/LiuMengxuan04/MiniCode) | TypeScript 原版，项目主入口 |
-| **Rust 版** | [harkerhand/MiniCode-rs](https://github.com/harkerhand/MiniCode-rs) | Rust 高性能实现 |
-| **Python 版** | 本仓库 | 零依赖 Python 实现 |
-
----
-
+```json
+{
+  "model": "claude-sonnet-4-20250514",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
+    "ANTHROPIC_AUTH_TOKEN": "your-token-here"
+  }
+}
+```
 ## 🎯 核心特性
 
 - **🖥️ 丰富的终端 UI** — 备用屏幕 TUI，面板、ANSI 样式、平滑滚动
@@ -109,36 +78,3 @@ python -m minicode.main
 | `docker_helper` | Docker 管理 |
 | `db_explorer` | SQLite 数据库探索 |
 
-*完整工具列表见 [英文版文档](#-built-in-tools)*
-
----
-
-## ⚙️ 配置
-
-### 设置文件
-
-`~/.mini-code/settings.json`：
-
-```json
-{
-  "model": "claude-sonnet-4-20250514",
-  "env": {
-    "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
-    "ANTHROPIC_AUTH_TOKEN": "your-token-here"
-  }
-}
-```
-
----
-
-## 📊 项目统计
-
-| 指标 | 值 |
-|---|---|
-| Python 文件数 | 69 |
-| 代码行数 | ~15,000 |
-| 内置工具 | 30+ |
-| 外部依赖 | **0** |
-| 优化点 | **93+** |
-| 测试通过率 | **98.9%** |
-| 代码可读性 | **9/10** |

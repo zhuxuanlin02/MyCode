@@ -36,6 +36,6 @@ Thumbs.db
 *.tmp
 *.bak
 
-
+#pc
 .claude
 stdoc
